@@ -1,20 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Continents Dropdown App</title>
+import { defineConfig } from 'vite';
 
-    <!-- Base tag to correctly resolve paths for GitHub Pages -->
-    <base href="/Contentful-Continents/">
-
-    <!-- Vite dynamically injects the correct paths for CSS and JS during the build -->
-    <link rel="stylesheet" href="/assets/index-2af8eb2b.css"> <!-- Update with actual path from build -->
-     <!-- Update with actual path from build -->
-    <script type="module" crossorigin src="/assets/index-7642c273.js"></script>
-  </head>
-  <body>
-    <div id="root"></div> <!-- Placeholder for React app -->
-  </body>
-</html>
+export default defineConfig({
+  base: '/Contentful-Continents/',  // Set base path for GitHub Pages subdirectory
+  build: {
+    outDir: 'dist',                // Output directory for build files
+    assetsDir: 'assets',           // Folder for assets
+    rollupOptions: {
+      input: 'index.html',         // Ensure the correct entry point is used
+    },
+  },
+});
