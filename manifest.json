@@ -1,0 +1,11 @@
+{
+    "name": "Continents",
+    "src": "src/index.html",
+    "locations": [
+      {
+        "location": "app",
+        "fieldTypes": ["symbol", "text"]
+      }
+    ]
+  }
+  
